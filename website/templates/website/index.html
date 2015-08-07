@@ -1,0 +1,18 @@
+{% if teacher_list %}
+    {% for q in teacher_list %}
+
+            <li>
+                <a href="#" class="slidebar_a"><i class="fa fa-table fa-fw"></i> {{ q.name }}
+            </li>
+    {% endfor %}  
+{% endif %} 
+
+
+{% if gen_info1 %}
+    {% for q in gen_info1 %}
+
+            <li>
+                <a href="#" class="slidebar_a"><i class="fa fa-table fa-fw"></i> {{ q.User_id }}
+            </li>
+    {% endfor %}  
+{% endif %} 
