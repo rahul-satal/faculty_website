@@ -326,7 +326,6 @@ class Userinfo(models.Model):
         db_table = 'userinfo'
 
 
-
 class About(models.Model):
 	about_desc = models.TextField(max_length=5000)
 	def __unicode__(self):              # __str__ on Python 3
@@ -346,4 +345,9 @@ class Mystudent(models.Model):
     name = models.CharField(max_length=200)
     def __unicode__(self):              # __str__ on Python 3
         	return str(self.name)
-    
+
+class Profile(models.Model):
+    name = models.CharField(max_length=200,default='Name')
+    faculty_pic = models.ImageField(upload_to="Images/Pic")
+    def __unicode__(self):              # __str__ on Python 3
+            return str(self.name)    

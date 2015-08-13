@@ -6,5 +6,6 @@ admin.site.register(About)
 admin.site.register(Myteacher)
 admin.site.register(Mystudent)
 admin.site.register(Myfriend)
+admin.site.register(Profile)
 
 
