@@ -9,3 +9,8 @@ def index(request):
 	teacher_list = Myteacher.objects.all()
 	context = {'teacher_list':teacher_list,'gen_info1':gen_info1}
 	return render(request, 'website/index.html', context)
+
+def index(request):
+	profile = Profile.objects.all()
+	context = {'profile':profile}
+	return render(request, 'website/header.html', context)

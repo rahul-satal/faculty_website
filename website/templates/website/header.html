@@ -12,14 +12,20 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'dashgumfree/Theme/assets/css/bootstrap.css' %}" rel="stylesheet">
-    <!--external css-->
+    <!--external css -navbar icons-->
     <link href="{% static 'dashgumfree/Theme/assets/font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="{% static 'dashgumfree/Theme/assets/css/zabuto_calendar.css' %}">
+    <!-- For thought homepage -->
     <link rel="stylesheet" type="text/css" href="{% static 'dashgumfree/Theme/assets/js/gritter/css/jquery.gritter.css' %}" />
+    <!--
+
+    <link rel="stylesheet" type="text/css" href="{% static 'dashgumfree/Theme/assets/css/zabuto_calendar.css' %}"> 
     <link rel="stylesheet" type="text/css" href="{% static 'dashgumfree/Theme/assets/lineicons/style.css' %}">    
-    
+
+    -->
     <!-- Custom styles for this template -->
+   
     <link href="{% static 'dashgumfree/Theme/assets/css/style.css' %}" rel="stylesheet">
+      <!--
     <link href="{% static 'dashgumfree/Theme/assets/css/style-responsive.css' %}" rel="stylesheet">
 
     <script src="{% static 'dashgumfree/Theme/assets/js/chart-master/Chart.js' %}"></script>
@@ -32,16 +38,9 @@
   </head>
 
   <body>
-    {% if slider_list %}
-    {% for q in slider_list %}
-
-     {% endfor %}
-     {% endif %}      
+         
 
   <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
       <!--header start-->
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
@@ -62,13 +61,16 @@
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
       <!--sidebar start-->
+      {% if profile %}
+    
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.html"><img src="../../../media/{{q.project_image}}" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
+              	  <h5 class="centered">{{ name }} Marcel Newman</h5>
+                  {% endif %} 
               	  	
                   <li class="mt">
                       <a class="active" href="index.html">
