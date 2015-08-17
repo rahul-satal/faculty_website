@@ -62,16 +62,19 @@
       *********************************************************************************************************************************************************** -->
       <!--sidebar start-->
       {% if profile %}
+      {% for q in profile %}
     
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="../../../media/{{q.project_image}}" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">{{ name }} Marcel Newman</h5>
-                  {% endif %} 
-              	  	
+              	  <p class="centered"><a href="profile.html"><img src="../../../media/{{q.faculty_pic}}" class="img-circle" width="60"></a></p>
+                  <h5 class="centered">{{ q.name }}</h5>
+
+    {% endfor %}
+    
+        {% endif %}              	  	
                   <li class="mt">
                       <a class="active" href="index.html">
                           <i class="fa fa-dashboard"></i>

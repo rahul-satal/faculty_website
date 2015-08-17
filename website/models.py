@@ -8,7 +8,8 @@
 # Also note: You'll have to insert the output of 'django-admin.py sqlcustom [app_label]'
 # into your database.
 from __future__ import unicode_literals
-
+from django.utils.translation import ugettext_lazy as _
+from django.core.exceptions import ValidationError
 from django.db import models
 
 
@@ -325,34 +326,53 @@ class Userinfo(models.Model):
         managed = False
         db_table = 'userinfo'
 
-
 class About(models.Model):
-	about_desc = models.TextField(max_length=5000)
-	def __unicode__(self):              # __str__ on Python 3
-        	return str(self.about_desc)
+        about_desc = models.TextField(max_length=5000,verbose_name="Description")
+
+        def __unicode__(self):              # __str__ on Python 3
+                return str(self.about_desc)
+
+
+        class Meta:
+            verbose_name = _('About')
+            verbose_name_plural = _('About You')      
+
 
 class Myteacher(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200,unique=True)
     def __unicode__(self):              # __str__ on Python 3
         	return str(self.name)
 
 class Myfriend(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200,unique=True)
     def __unicode__(self):              # __str__ on Python 3
         	return str(self.name)
 
 class Mystudent(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200,unique=True)
     def __unicode__(self):              # __str__ on Python 3
         	return str(self.name)
+class Meta:
+    unique_together = ('name')                    
 
 class Profile(models.Model):
-    name = models.CharField(max_length=200,default='Name')
+    name = models.CharField(max_length=200)
     faculty_pic = models.ImageField(upload_to="Images/Pic")
-    def __unicode__(self):              # __str__ on Python 3
-            return str(self.name)    
+
+    def __str__(self):              # __unicode__ on Python 2
+        return "Faculty is %s " % (self.name)
+
+    class Meta:
+            verbose_name = _('Profile')
+            verbose_name_plural = _('Profile')   
+    def clean(self):
+        validate_only_one_instance(self)              
 
 
+
+'''
+Example of one to one relationship ie one place may have only one or zero restaurant
+'''
 class Place(models.Model):
     name = models.CharField(max_length=50)
     address = models.CharField(max_length=80)
@@ -374,3 +394,58 @@ class Waiter(models.Model):
 
     def __str__(self):              # __unicode__ on Python 2
         return "%s the waiter at %s" % (self.name, self.restaurant)            
+
+
+
+
+
+
+class Engine(models.Model):
+    name = models.CharField(max_length=25)
+
+    def __unicode__(self):
+        return self.name
+
+class Car(models.Model):
+    name = models.CharField(max_length=25)
+    engine = models.OneToOneField(Engine)
+
+    def __unicode__(self):
+        return self.name
+
+class Engine2(models.Model):
+    name = models.CharField(max_length=25)
+
+    def __unicode__(self):
+        return self.name
+
+class Car2(models.Model):
+    name = models.CharField(max_length=25)
+    engine = models.ForeignKey(Engine2, unique=True)
+
+    def __unicode__(self):
+        return self.name
+
+
+def validate_only_one_instance(obj):
+    model = obj.__class__
+    if (model.objects.count() > 0 and
+            obj.id != model.objects.get().id):
+        raise ValidationError("Can only create 1 %s instance" % model.__name__)
+
+class Example(models.Model):
+    name = models.CharField(max_length=25,default="Rahul")
+
+
+    def clean(self):
+        validate_only_one_instance(self)     
+
+class Employer(models.Model):
+    name = models.CharField(max_length=50, verbose_name="Employer's Name")
+    pin = models.CharField(max_length=50, verbose_name="Employer's PIN")
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        unique_together = ('name', 'pin')           
