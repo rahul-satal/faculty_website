@@ -9,7 +9,6 @@
 <meta name="description" content="" />
 <meta name="author" content="http://bootstraptaste.com" />
 <!-- css -->
-<link href="{% static 'dashgumfree/Theme/assets/css/bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'moderna/css/bootstrap.min.css' %}" rel="stylesheet">
 <link href="{% static 'moderna/css/fancybox/jquery.fancybox.css' %}" rel="stylesheet">
 <link href="{% static 'moderna/css/jcarousel.css' %}" rel="stylesheet">
@@ -45,7 +44,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><span>M</span>oderna</a>
+                    <a class="navbar-brand" href="index.html"><span>S</span>haligram <span>P</span>rajapat</a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
@@ -68,11 +67,12 @@
   </header>
   <!-- end header -->
   <section id="featured">
-  <!-- start slider -->
+
+  <!-- start slider --
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-  <!-- Slider -->
+  -- Slider --
         <div id="main-slider" class="flexslider">
             <ul class="slides">
               <li>
@@ -101,11 +101,36 @@
               </li>
             </ul>
         </div>
-  <!-- end slider -->
+  <-- end slider --
       </div>
     </div>
-  </div>  
-  
+  </div> 
+  slider ends--> 
+  <div class="container">
+<div class="row">
+  <div class="col-md-3"> <img src="https://sites.google.com/site/shaligramiipsdavvindore/_/rsrc/1319110431206/home/190-shakigram%20prajapati%20pp.jpg" class="img-thumbnail" alt="Cinque Terre" ></div>
+
+<!--Key Achievements start-->
+<div class="col-md-9">
+  <h2>Key Achievements</h2>
+  <div class="panel panel-default">
+    <div class="panel-heading">Key Achievements</div>
+    <div class="panel-body">
+<ul style="list-style-type:none;text-align: left;">
+                {% if achievements %}
+                        {% for q in achievements %}
+                       <div style="display:inline;"> <i class="fa fa-chevron-right " style="color:hsl(201, 44%, 59%);display:inline;"></i>&nbsp;&nbsp;&nbsp;<li style="display:inline;"><h5 style="display:inline;">{{ q.name }}</h5></li></div><br>
+                    {% endfor %}
+                         {% endif %} 
+                        </ul>
+
+      </div>
+  </div>
+
+</div>
+<!--Key Achievements ends-->
+
+
   
 
   </section>
