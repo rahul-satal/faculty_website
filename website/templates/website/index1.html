@@ -1,0 +1,52 @@
+{% load staticfiles %}
+    <div>{% include "website/header.html" %}</div>
+
+    	<!--main content start-->
+      <section id="main-content" >
+          <section class="wrapper" >
+
+              <div class="row">
+                  <div class="col-lg-9 main-chart">
+                  
+                      
+                      <div class="row">
+
+    
+                      	
+						<div class="col-md-12 ">
+							<!-- WHITE PANEL - TOP USER -->
+							<div class="white-panel pn">
+								<div class="white-header">
+									<h5 style="color:hsl(0, 0%,60%);font-size: 25px;font-weight:700;">
+										Key Achievements</h5>
+								</div>
+								
+									<div class="col-md-12" style="color:hsl(0, 0%, 47%);font-size: 22px;font-family:Open Sans,Arial,sans-serif;">
+      									<ul style="list-style-type:disc;text-align: left;">
+										{% if achievements %}
+      									{% for q in achievements %}
+      										                          <i class="fa fa-dashboard"></i>
+<li><h5>{{ q.name }}</h5></li>
+										{% endfor %}
+       									 {% endif %} 
+      									</ul>
+										
+									</div>
+								</div>
+							</div>
+						</div><!-- /col-md-4 -->
+                      	
+                    </div><!-- /row -->
+        
+					
+                  </div><!-- /col-lg-9 END SECTION MIDDLE -->
+                  
+              </div>
+          </section>
+      </section>
+
+    </section><!--container header-->
+
+    <div>{% include "website/footer.html" %}</div>
+
+  

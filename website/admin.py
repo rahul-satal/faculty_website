@@ -16,6 +16,7 @@ admin.site.register(Car)
 admin.site.register(Car2)
 admin.site.register(Example)
 admin.site.register(Employer)
+admin.site.register(Achievements)
 
 
 

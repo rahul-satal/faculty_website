@@ -328,11 +328,8 @@ class Userinfo(models.Model):
 
 class About(models.Model):
         about_desc = models.TextField(max_length=5000,verbose_name="Description")
-
         def __unicode__(self):              # __str__ on Python 3
                 return str(self.about_desc)
-
-
         class Meta:
             verbose_name = _('About')
             verbose_name_plural = _('About You')      
@@ -448,4 +445,10 @@ class Employer(models.Model):
         return self.name
 
     class Meta:
-        unique_together = ('name', 'pin')           
+        unique_together = ('name', 'pin') 
+
+class Achievements(models.Model):
+    name = models.TextField(max_length=500, verbose_name="Description")
+
+    def __unicode__(self):
+        return self.name

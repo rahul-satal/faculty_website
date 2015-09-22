@@ -5,5 +5,9 @@ from .models import *
 
 def index(request):
 	profile = Profile.objects.all()
-	context = {'profile':profile}
+	achievements = Achievements.objects.all()
+	context = {'profile':profile,'achievements':achievements}
 	return render(request, 'website/index.html', context)
+
+
+
