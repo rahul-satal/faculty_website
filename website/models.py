@@ -124,7 +124,7 @@ class TeachClmi(models.Model):
 
 
 class TeachCpc(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30, primary_key = True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_cpc_title = models.CharField(db_column='Teach_CPC_Title', max_length=50)  # Field name made lowercase.
     teach_cpc_agency = models.CharField(db_column='Teach_CPC_Agency', max_length=50)  # Field name made lowercase.
@@ -356,7 +356,7 @@ class Meta:
     unique_together = ('name')                    
 
 class Profile(models.Model):
-    name = models.CharField(max_length=200)#,editable=False
+    name = models.CharField(max_length=200,editable=False)#,
     faculty_pic = models.ImageField(upload_to="Images/Pic")
 
     def __str__(self):              # __unicode__ on Python 2
