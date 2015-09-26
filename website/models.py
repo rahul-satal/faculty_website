@@ -356,7 +356,7 @@ class Meta:
     unique_together = ('name')                    
 
 class Profile(models.Model):
-    name = models.CharField(max_length=200,editable=False)
+    name = models.CharField(max_length=200)#,editable=False
     faculty_pic = models.ImageField(upload_to="Images/Pic")
 
     def __str__(self):              # __unicode__ on Python 2

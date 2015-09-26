@@ -15,7 +15,7 @@ def ongoing_projects(request):
 	return render(request, 'website/ongoing_projects.html', context)
 
 def completed_projects(request):
-	completed_projects_list = opc.objects.all()
+	completed_projects_list = TeachCpc.objects.all()
 	context = {'completed_projects_list':completed_projects_list}
 	return render(request, 'website/completed_projects.html', context)	
 
