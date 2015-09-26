@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Basic Table</h2>{{ q.User_Id }}
+  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>Project Title</th>
+        <th>Period</th>
+      </tr>
+    </thead>
+    
+{% if ongoing_projects_list %}
+    {% for q in ongoing_projects_list %}
+
+           
+    <tbody>
+      <tr>
+        <td>{{ q.user_id }}</td>
+        <td>{{ q.teach_opc_title }}</td>
+        <td>{{ q.teach_opc_period }}</td>
+      </tr>
+    </tbody>
+
+
+    {% endfor %}  
+{% endif %} 
+
+  </table>
+</div>
+
+</body>
+</html>

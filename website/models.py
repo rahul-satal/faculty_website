@@ -225,7 +225,8 @@ class TeachLstp(models.Model):
 
 
 class TeachOpc(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    #id = models.IntegerField(primary_key=True)
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_opc_title = models.CharField(db_column='Teach_OPC_Title', max_length=50)  # Field name made lowercase.
     teach_opc_agency = models.CharField(db_column='Teach_OPC_Agency', max_length=50)  # Field name made lowercase.
@@ -236,6 +237,8 @@ class TeachOpc(models.Model):
     class Meta:
         managed = False
         db_table = 'teach_opc'
+    def __unicode__(self):              # __str__ on Python 3
+        return str(self.teach_opc_title)    
 
 
 class TeachPda(models.Model):
@@ -353,7 +356,7 @@ class Meta:
     unique_together = ('name')                    
 
 class Profile(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200,editable=False)
     faculty_pic = models.ImageField(upload_to="Images/Pic")
 
     def __str__(self):              # __unicode__ on Python 2

@@ -17,6 +17,16 @@ admin.site.register(Car2)
 admin.site.register(Example)
 admin.site.register(Employer)
 admin.site.register(Achievements)
+admin.site.register(TeachOpc)
+admin.site.register(TeachLstp)
+admin.site.register(AcadAct)
+admin.site.register(Enclosures)
+admin.site.register(GenInfo)
+admin.site.register(Image)
+admin.site.register(TeachTlm)
+admin.site.register(Orie)
+
+
 
 
 
