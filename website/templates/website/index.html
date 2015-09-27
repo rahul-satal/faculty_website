@@ -2,7 +2,6 @@
 <!DOCTYPE html>
   <html lang="en">
 <head>
-    <link href="{% static 'mutech/css/index.css' %}" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,12 +17,7 @@
 
   <section id="featured">
   <div class="container">
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-9">
-        <h2>Key Achievements</h2>
-      </div>
-    </div>
+
 
 <div class="row">
   <div class="col-md-3">
@@ -32,10 +26,16 @@
         <img src="../../../media/{{q.faculty_pic}}" class="img-thumbnail" alt="Cinque Terre" >
       {% endfor %}
     {% endif %} 
+    <center>
+      <h4>Senior Associate</h4>
+      <h5><a href="#">International Institute of professional Studies</a></h5>
+      <h5><a href="#">D.A.V.V</a></h5>
+    </center>
   </div>
 
 <!--Key Achievements start-->
 <div class="col-md-9">
+  <h2>Key Achievements</h2>
   <div class="panel panel-default">
     <div class="panel-heading">Key Achievements</div>
     <div class="panel-body">
@@ -54,6 +54,8 @@
 
     </div>
   </div>
+</div>
+</div>
 </div>
 <!--Key Achievements ends-->
 </section>
