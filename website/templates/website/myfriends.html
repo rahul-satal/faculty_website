@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+  <div>{% include "website/header.html" %}</div>
+  <div class="container" style="min-height:700px;">
+    <h2>My Friends</h2>
+
+      <ul>
+  {% if myfriends_list %}
+      {% for q in myfriends_list %}  
+        <li>{{ q.name }}</li>
+      {% endfor %}  
+  {% endif %} 
+      </ul>
+
+  </div>
+  <div>{% include "website/footer.html" %}</div>
+
+</body>
+</html>

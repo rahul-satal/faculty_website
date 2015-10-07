@@ -19,6 +19,11 @@ def completed_projects(request):
 	context = {'completed_projects_list':completed_projects_list}
 	return render(request, 'website/completed_projects.html', context)	
 
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)	
+
 
 
 
