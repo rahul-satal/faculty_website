@@ -9,9 +9,9 @@ urlpatterns = [
     url(r'^ShaligramPrajapat/projects/ongoing_projects$', views.ongoing_projects, name='ongoing_projects'),
     url(r'^ShaligramPrajapat/projects/completed_projects$', views.completed_projects, name='completed_projects'),
     url(r'^ShaligramPrajapat/Myfriend$', views.myfriends, name='Myfriend'),
-    url(r'^ShaligramPrajapat/projects/completed_projects$', views.completed_projects, name='completed_projects'),
-    url(r'^ShaligramPrajapat/projects/completed_projects$', views.completed_projects, name='completed_projects'),
-    url(r'^ShaligramPrajapat/projects/completed_projects$', views.completed_projects, name='completed_projects'),
+    url(r'^ShaligramPrajapat/Lectures$', views.lecture, name='lecture'),
+    url(r'^ShaligramPrajapat/InnovativeTeaching$', views.innovative_teaching, name='innovative_teaching'),
+    url(r'^ShaligramPrajapat/AdditionalTeaching$', views.additional_teaching, name='additional_teaching'),
     url(r'^ShaligramPrajapat/projects/completed_projects$', views.completed_projects, name='completed_projects'),
     url(r'^ShaligramPrajapat/projects/completed_projects$', views.completed_projects, name='completed_projects'),
 

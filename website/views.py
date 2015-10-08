@@ -24,6 +24,21 @@ def myfriends(request):
 	context = {'myfriends_list':myfriends_list}
 	return render(request, 'website/myfriends.html', context)	
 
+def lecture(request):
+	lecture_list = Myfriend.objects.all()
+	context = {'lecture_list':lecture_list}
+	return render(request, 'website/lecture.html', context)
+
+def additional_teaching(request):
+	additional_list = Myfriend.objects.all()
+	context = {'additional_list':additional_list}
+	return render(request, 'website/additional_teaching.html', context)
+
+def innovative_teaching(request):
+	innovative_list = Myfriend.objects.all()
+	context = {'innovative_list':innovative_list}
+	return render(request, 'website/innovative_teaching.html', context)			
+
 
 
 

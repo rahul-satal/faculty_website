@@ -1,9 +1,25 @@
 from django.contrib import admin
-
 from .models import *
 
+import bulk_admin
+
+
+@admin.register(Myteacher)
+class ImageAdmin(bulk_admin.BulkModelAdmin):
+    search_fields = ('name',)
+
+#@admin.register(Achievements)
+#class ImageAdmin(bulk_admin.BulkModelAdmin):
+ #   search_fields = ('name')    
+
+@admin.register(Employer)
+class ImageAdmin(bulk_admin.BulkModelAdmin):
+	search_fields = ('name','pin') 
+
+
+
 admin.site.register(About,verbose_name_plural = "storiy")
-admin.site.register(Myteacher)
+#																																						admin.site.register(Myteacher)
 admin.site.register(Mystudent)
 admin.site.register(Myfriend)
 admin.site.register(Profile)
@@ -15,8 +31,8 @@ admin.site.register(Engine2)
 admin.site.register(Car)
 admin.site.register(Car2)
 admin.site.register(Example)
-admin.site.register(Employer)
-admin.site.register(Achievements)
+#admin.site.register(Employer)
+#admin.site.register(Achievements)
 admin.site.register(TeachOpc)
 admin.site.register(TeachLstp)
 admin.site.register(AcadAct)

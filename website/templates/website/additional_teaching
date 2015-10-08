@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+  <div>{% include "website/header.html" %}</div>
+  <div class="container" style="min-height:700px;">
+    <h2>Completed Projects</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Project Title</th>
+          <th>Agency</th>
+          <th>Period</th>
+          <th>Year</th>
+
+        </tr>
+      </thead>
+      
+  {% if completed_projects_list %}
+      {% for q in completed_projects_list %}  
+      <tbody>
+        <tr>
+          <td>{{ q.teach_cpc_title }}</td>
+          <td>{{ q.teach_cpc_agency }}</td>
+          <td>{{ q.teach_cpc_period }}</td>
+          <td>{{ q.year }}</td>
+        </tr>
+      </tbody>
+
+      {% endfor %}  
+  {% endif %} 
+
+    </table>
+  </div>
+  <div>{% include "website/footer.html" %}</div>
+
+</body>
+</html>
