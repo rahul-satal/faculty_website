@@ -15,25 +15,25 @@
 <body>
   <div>{% include "website/header.html" %}</div>
   <div class="container" style="min-height:700px;">
-    <h2>Completed Projects</h2>
+    <h2>Additional Teaching</h2>
     <table class="table">
       <thead>
         <tr>
-          <th>Project Title</th>
-          <th>Agency</th>
-          <th>Period</th>
+          <th>Cource Name</th>
+          <th>Consulted</th>
+          <th>Prescribed</th>
           <th>Year</th>
 
         </tr>
       </thead>
       
-  {% if completed_projects_list %}
-      {% for q in completed_projects_list %}  
+  {% if additional_list %}
+      {% for q in additional_list %}  
       <tbody>
         <tr>
-          <td>{{ q.teach_cpc_title }}</td>
-          <td>{{ q.teach_cpc_agency }}</td>
-          <td>{{ q.teach_cpc_period }}</td>
+          <td>{{ q.teach_rimc_course }}</td>
+          <td>{{ q.teach_rimc_consulted }}</td>
+          <td>{{ q.teach_rimc_prescribed }}</td>
           <td>{{ q.year }}</td>
         </tr>
       </tbody>

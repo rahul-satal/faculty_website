@@ -15,25 +15,27 @@
 <body>
   <div>{% include "website/header.html" %}</div>
   <div class="container" style="min-height:700px;">
-    <h2>Completed Projects</h2>
+    <h2>Books Published</h2>
     <table class="table">
       <thead>
         <tr>
-          <th>Project Title</th>
-          <th>Agency</th>
-          <th>Period</th>
+          <th>Title</th>
+          <th>Type of Book</th>
+          <th>ISSN / ISBN No</th>
+          <th>No. of Co-authors</th>
           <th>Year</th>
 
         </tr>
       </thead>
       
-  {% if completed_projects_list %}
-      {% for q in completed_projects_list %}  
+  {% if books_published_list %}
+      {% for q in books_published_list %}  
       <tbody>
         <tr>
-          <td>{{ q.teach_cpc_title }}</td>
-          <td>{{ q.teach_cpc_agency }}</td>
-          <td>{{ q.teach_cpc_period }}</td>
+          <td>{{ q.teach_bpe_tpn }}</td>
+          <td>{{ q.teach_bpe_tba }}</td>
+          <td>{{ q.teach_bpe_pissn }}</td>
+          <td>{{ q.teach_bpe_noc }}</td>
           <td>{{ q.year }}</td>
         </tr>
       </tbody>

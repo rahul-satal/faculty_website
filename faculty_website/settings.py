@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'website',
     'favicon',
-    'bulk_admin',
+    'bulk_admin',    #https://pypi.python.org/pypi/django-bulk-admin
 )
 
 MIDDLEWARE_CLASSES = (

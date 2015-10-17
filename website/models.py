@@ -69,7 +69,7 @@ class Image(models.Model):
 
 
 class Orie(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=20)  # Field name made lowercase.
     sno = models.IntegerField(db_column='SNo')  # Field name made lowercase.
     details = models.CharField(db_column='Details', max_length=1000)  # Field name made lowercase.
@@ -80,7 +80,7 @@ class Orie(models.Model):
 
 
 class TeachApb(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_apb_tno = models.CharField(db_column='Teach_APB_TNO', max_length=50)  # Field name made lowercase.
     teach_apb_bep = models.CharField(db_column='Teach_APB_BEP', max_length=50)  # Field name made lowercase.
@@ -96,7 +96,7 @@ class TeachApb(models.Model):
 
 
 class TeachBpe(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_bpe_tpn = models.CharField(db_column='Teach_BPE_TPN', max_length=50)  # Field name made lowercase.
     teach_bpe_tba = models.CharField(db_column='Teach_BPE_TBA', max_length=50)  # Field name made lowercase.
@@ -112,7 +112,7 @@ class TeachBpe(models.Model):
 
 
 class TeachClmi(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_clmi_toa = models.CharField(db_column='Teach_CLMI_TOA', max_length=100)  # Field name made lowercase.
     teach_clmi_ysr = models.CharField(db_column='Teach_CLMI_YSR', max_length=30)  # Field name made lowercase.
@@ -139,7 +139,7 @@ class TeachCpc(models.Model):
 
 
 class TeachEcfa(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_ecfa_toa = models.CharField(db_column='Teach_ECFA_TOA', max_length=150)  # Field name made lowercase.
     teach_ecfa_ah = models.CharField(db_column='Teach_ECFA_AH', max_length=30)  # Field name made lowercase.
@@ -151,7 +151,7 @@ class TeachEcfa(models.Model):
 
 
 class TeachEdap(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_edap_ted = models.CharField(db_column='Teach_EDAP_TED', max_length=100)  # Field name made lowercase.
     teach_edap_da = models.CharField(db_column='Teach_EDAP_DA', max_length=30)  # Field name made lowercase.
@@ -164,7 +164,7 @@ class TeachEdap(models.Model):
 
 
 class TeachFcp(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_fcp_tno = models.CharField(db_column='Teach_FCP_TNO', max_length=50)  # Field name made lowercase.
     teach_fcp_bep = models.CharField(db_column='Teach_FCP_BEP', max_length=50)  # Field name made lowercase.
@@ -179,7 +179,7 @@ class TeachFcp(models.Model):
 
 
 class TeachFdp(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_fdp_programme = models.CharField(db_column='Teach_FDP_Programme', max_length=150)  # Field name made lowercase.
     teach_fdp_duration = models.CharField(db_column='Teach_FDP_Duration', max_length=20)  # Field name made lowercase.
@@ -192,7 +192,7 @@ class TeachFdp(models.Model):
 
 
 class TeachIlc(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_ilc_tol = models.CharField(db_column='Teach_ILC_TOL', max_length=50)  # Field name made lowercase.
     teach_ilc_tcs = models.CharField(db_column='Teach_ILC_TCS', max_length=50)  # Field name made lowercase.
@@ -207,7 +207,7 @@ class TeachIlc(models.Model):
 
 
 class TeachLstp(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_lstp_course = models.CharField(db_column='Teach_LSTP_Course', max_length=100)  # Field name made lowercase.
     teach_lstp_level = models.CharField(db_column='Teach_LSTP_Level', max_length=30)  # Field name made lowercase.
@@ -242,7 +242,7 @@ class TeachOpc(models.Model):
 
 
 class TeachPda(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_pda_toa = models.CharField(db_column='Teach_PDA_TOA', max_length=150)  # Field name made lowercase.
     teach_pda_ywr = models.CharField(db_column='Teach_PDA_YWR', max_length=50)  # Field name made lowercase.
@@ -254,7 +254,7 @@ class TeachPda(models.Model):
 
 
 class TeachPpc(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=10)  # Field name made lowercase.
     teach_ppc_tpp = models.CharField(db_column='Teach_PPC_TPP', max_length=50)  # Field name made lowercase.
     teach_ppc_tcs = models.CharField(db_column='Teach_PPC_TCS', max_length=50)  # Field name made lowercase.
@@ -269,7 +269,7 @@ class TeachPpc(models.Model):
 
 
 class TeachPpij(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=11)  # Field name made lowercase.
     teach_ppij_tno = models.CharField(db_column='Teach_PPIJ_TNO', max_length=30)  # Field name made lowercase.
     teach_ppij_journal = models.CharField(db_column='Teach_PPIJ_Journal', max_length=30)  # Field name made lowercase.
@@ -285,7 +285,7 @@ class TeachPpij(models.Model):
 
 
 class TeachRg(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=11)  # Field name made lowercase.
     teach_rg_ne = models.CharField(db_column='Teach_RG_NE', max_length=30)  # Field name made lowercase.
     teach_rg_ts = models.CharField(db_column='Teach_RG_TS', max_length=50)  # Field name made lowercase.
@@ -298,7 +298,7 @@ class TeachRg(models.Model):
 
 
 class TeachRimc(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=11)  # Field name made lowercase.
     teach_rimc_course = models.CharField(db_column='Teach_RIMC_Course', max_length=100)  # Field name made lowercase.
     teach_rimc_consulted = models.CharField(db_column='Teach_RIMC_Consulted', max_length=255)  # Field name made lowercase.
@@ -311,7 +311,7 @@ class TeachRimc(models.Model):
 
 
 class TeachTlm(models.Model):
-    user_id = models.CharField(db_column='User_Id', max_length=30)  # Field name made lowercase.
+    user_id = models.CharField(db_column='User_Id', max_length=30,primary_key=True)  # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=11)  # Field name made lowercase.
     teach_tlm_sd = models.CharField(db_column='Teach_TLM_SD', max_length=255)  # Field name made lowercase.
     teach_tlm_api = models.IntegerField(db_column='Teach_TLM_API')  # Field name made lowercase.

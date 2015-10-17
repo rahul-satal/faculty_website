@@ -15,25 +15,27 @@
 <body>
   <div>{% include "website/header.html" %}</div>
   <div class="container" style="min-height:700px;">
-    <h2>Innovative Teaching</h2>
+    <h2>Full Papers in Conference Proceedings</h2>
     <table class="table">
       <thead>
         <tr>
-          <th>Short Description </th>
-          <th>Agency</th>
-          <th>Period</th>
+          <th>Title</th>
+          <th>Details of Conference publications</th>
+          <th>ISSN/ISBN No.</th>
+          <th>No. of Co-authors</th>
           <th>Year</th>
 
         </tr>
       </thead>
       
-  {% if innovative_list %}
-      {% for q in innovative_list %}  
+  {% if full_papers_list  %}
+      {% for q in full_papers_list %}  
       <tbody>
         <tr>
-          <td>{{ q.teach_cpc_title }}</td>
-          <td>{{ q.teach_cpc_agency }}</td>
-          <td>{{ q.teach_cpc_period }}</td>
+          <td>{{ q.teach_fcp_tno }}</td>
+          <td>{{ q.teach_fcp_bep }}</td>
+          <td>{{ q.teach_fcp_issn }}</td>
+          <td>{{ q.teach_fcp_noc }}</td>
           <td>{{ q.year }}</td>
         </tr>
       </tbody>
