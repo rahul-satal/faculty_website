@@ -61,8 +61,54 @@ def full_papers(request):
 def books_published(request):
 	books_published_list = TeachBpe.objects.filter(user_id = name)
 	context = {'books_published_list':books_published_list}
-	return render(request, 'website/books_published.html', context)					
+	return render(request, 'website/books_published.html', context)		
 
+
+	   ######### Pbas	#########
+
+def pbas_index(request):
+	return render(request, 'pbas/index.html')
+
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)
+
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)
+
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)
+
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)
+
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)
+
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)
+	
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)								   
+
+
+def myfriends(request):
+	myfriends_list = Myfriend.objects.all()
+	context = {'myfriends_list':myfriends_list}
+	return render(request, 'website/myfriends.html', context)
 
 
 
