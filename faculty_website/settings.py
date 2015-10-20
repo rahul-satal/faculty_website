@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'website',
     'favicon',
     'bulk_admin',    #https://pypi.python.org/pypi/django-bulk-admin
+    'Pbas',
 )
 
 MIDDLEWARE_CLASSES = (
