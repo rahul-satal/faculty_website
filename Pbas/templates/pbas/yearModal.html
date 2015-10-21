@@ -1,11 +1,12 @@
-<!--
-<?php
-	if(isset($_SESSION['username'])){
-?>
--->
+{% load staticfiles %}
+	<link href="{% static 'pbas/css/bootstrap.min.css' %}" rel="stylesheet"> -->
 
+
+					 	aaaa
 	<!-- Modal Window For Getting PBAS Year -->
+	<p>sdsdswdsd</p>
 		<div class="modal fade" id="yearModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+			bbbb
 			 <div class="modal-dialog">
 				 <div class="modal-content">
 					 <div class="modal-header">
@@ -16,7 +17,7 @@
 						<div class="modal-header text-center">
 							<b>Manage Your PBAS Account</b>
 						</div><br><br>
-						<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" class="form-inline text-center" method="post">
+						<form action="#" class="form-inline text-center" method="post">
 							<label>Enter The Year &nbsp</label>
 							<select class="form-control" required="required" name="pbasYear" id="myInput">
 			    					<script>var i;for(i=2015;i>=1990;i--){j=i;document.write("<option name='pbasYear'>"+i+"-"+ ++j +"</option>");}</script>
@@ -30,9 +31,17 @@
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
+
+zzz
+
+</body>
+</html>
+
+		<!--
 <?php
 	}
 	else{
 		header('location: index.php');
 	}
 ?>
+-->
