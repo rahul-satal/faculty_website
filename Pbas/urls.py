@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    url(r'^Index$', views.login, name='pbas_index'),
+    url(r'^index$', views.login, name='pbas_index'),
     url(r'^Home$', views.home_page, name='home_page'),
 
 

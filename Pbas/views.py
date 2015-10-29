@@ -4,9 +4,7 @@ from website.models import *
 
 name = "shaligram.prajapat@gmail.com"
 
-
 def login(request):
-	#user_list = Userinfo.objects.all()
 	if request.method == 'GET':
 		return render(request, 'pbas/index.html')
 	if request.method == 'POST':
@@ -15,6 +13,15 @@ def login(request):
 			if current_user_object[0].pwd == request.POST['pwd']:
 				return render(request, 'pbas/yearModal.html')
 			 
+
+def signup_action(request):
+	if request.POST['userID'] and request.POST['regpass'] and request.POST['confirmPass']:
+		''' -----fetching the data from the user and saving it in database---- '''
+		data = Userinfo(userID= request.POST['userID'], pwd = request.POST['regPass'])
+		data.save()
+		return HttpResponseRedirect('/Pbas/Index/')
+			 
+
 def home_page(request):
 	return render(request, 'pbas/home.html')
 
