@@ -7,6 +7,7 @@ def index(request):
 	profile = Profile.objects.all()
 	achievements = Achievements.objects.all()
 	context = {'profile':profile,'achievements':achievements}
+	return HttpResponse("hello")
 	return render(request, 'website/index.html', context)
 
 def ongoing_projects(request):

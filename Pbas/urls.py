@@ -6,26 +6,5 @@ from django.contrib import admin
 urlpatterns = patterns('',
     url(r'^index$', views.login, name='pbas_index'),
     url(r'^Home$', views.home_page, name='home_page'),
-
-
-    
-    '''
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),
-    url(r'^Index$', views.pbas_index, name='pbas_index'),'''
- 
-
+    url(r'^signup_action/$', views.signup_action, name='signup_action'),
     )

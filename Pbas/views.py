@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 from website.models import *
 
@@ -11,17 +11,20 @@ def login(request):
 		current_user_object = Userinfo.objects.all().filter(user_id = request.POST['user_id'])
 		if current_user_object:
 			if current_user_object[0].pwd == request.POST['pwd']:
+				#return HttpResponse('login')
 				return render(request, 'pbas/yearModal.html')
+				#return HttpResponseRedirect(request, 'pbas/yearModal.html')
 			 
 
 def signup_action(request):
-	if request.POST['userID'] and request.POST['regpass'] and request.POST['confirmPass']:
+	if request.POST['userID'] and request.POST['regPass'] and request.POST['confirmPass']:
 		''' -----fetching the data from the user and saving it in database---- '''
-		data = Userinfo(userID= request.POST['userID'], pwd = request.POST['regPass'])
+		data = Userinfo(user_id= request.POST['userID'], pwd = request.POST['regPass'])
 		data.save()
-		return HttpResponseRedirect('/Pbas/Index/')
-			 
+		return render(request, 'pbas/index.html')
 
+			 
+#return render_to_response('fileupload/upload.html', {'form': c['UploadFileForm']},  RequestContext(request))
 def home_page(request):
 	return render(request, 'pbas/home.html')
 

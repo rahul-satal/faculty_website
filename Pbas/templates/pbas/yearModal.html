@@ -1,8 +1,7 @@
 {% load staticfiles %}
-						       {% csrf_token %}
 	<link href="{% static 'pbas/css/bootstrap.min.css' %}" rel="stylesheet">
 	<!-- Modal Window For Getting PBAS Year -->
-		<div id="yearModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false"><!--  class="modal fade" -->
+		<div id="yearModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" class="modal fade"><!--  class="modal fade" -->
 			 <div class="modal-dialog">
 				 <div class="modal-content">
 					 <div class="modal-header">
@@ -15,6 +14,7 @@
 						</div><br><br>
 
 						<form action="/Pbas/Home" class="form-inline text-center" method="post">
+						       {% csrf_token %}
 							<label>Enter The Year &nbsp</label>
 							<select class="form-control" required="required" name="pbasYear" id="myInput">
 			    					<script>var i;for(i=2015;i>=1990;i--){j=i;document.write("<option name='pbasYear'>"+i+"-"+ ++j +"</option>");}</script>

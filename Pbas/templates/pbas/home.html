@@ -1,5 +1,6 @@
+<!--
 <?php
-	session_start();
+/*	session_start();
 	include('DBConnect.php');
 	$user = $_SESSION['username'];
 	
@@ -12,7 +13,9 @@
 	
 	$result = mysqli_query($con,"Select * from gen_info where User_Id ='".$user."'") or die("Error : ".mysqli_error($con));
 	$rw = mysqli_fetch_array($result);
+	*/
 	?>
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,30 +24,34 @@
     <meta name="description" content="">
     <meta name="author" content="">
 <title>PBAS | HOME</title>
-        <?php
-			include('cssLinks.php');
-		?>
+{% load staticfiles %}
+ <div>{% include "pbas/header.html" %}</div>
+ <div>{% include "pbas/home_header.html" %}</div>
+
+        
+     <!--   <?php #include('cssLinks.php');	?> -->
 
 
 </head>
-
 <body >
-<?php 
-	if(isset($_SESSION['username'])){
+	<!--
+<?php /*
+	 if(isset($_SESSION['username'])){
 	    echo '<div id="wrap">';
 		include('header.php');
-		include('yearModal.php');
-?>
-	<!-- condition for showing modal window only when year is not set. -->
-	<?php if(!isset($_SESSION['pbasYear'])){ ?>
+		include('yearModal.php'); */
+?> -->
+	<!-- condition for showing modal window only when year is not set. 
+	<?php # if(!isset($_SESSION['pbasYear'])){ ?>
 		
 	<?php }?>
+	-->
 	 
     <div class="container" style="background-color:#FFFFFF;" >
    	   <div class="row">
 			<div class="col-sm-12">
 		   		<div  style="box-shadow:5px 5px 5px 5px #888888; padding:3px 3px 3px 3px;" >
-		   				<div class="pull-left" > <img src="images/iipslogo.jpg" class="img-polaroid" style="height:100px"></div>.
+		   				<div class="pull-left" > <img src="{% static 'pbas/images/iipslogo.jpg' %}" class="img-polaroid" style="height:100px"></div>.
 		  					<center><b>
 		  					<div class="text-primary" ><h4>Welcome <?php echo $rw['Gen_Info_Name']; ?></h4>
 		  					</div>
